@@ -1,0 +1,14 @@
+- const css_files = htmlWebpackPlugin.files.css;
+- const js_files = htmlWebpackPlugin.files.js;
+
+doctype html
+html
+    head
+        each css_file in css_files
+            link(href=css_file rel="stylesheet")
+
+    body
+        div#app
+
+         each js_file in js_files
+             script(src=js_file)
